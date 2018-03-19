@@ -21,10 +21,10 @@ assertErr4 = "Num valid phrases does not match"
 unitTests = testGroup "Unit tests"
   [
     testCase "Compute captcha part1 correctly" $
-    assertEqual assertErr1 9 (compute1 "91212129")
+    assertEqual assertErr1 9 (unsafeCompute1 "91212129")
   ,
     testCase "Compute captcha part2 correctly" $
-    assertEqual assertErr1 4 (compute2 "12131415")
+    assertEqual assertErr1 4 (unsafeCompute2 "12131415")
   ,
 
     testCase "Compute unique pairs" $

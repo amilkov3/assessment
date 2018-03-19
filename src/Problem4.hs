@@ -27,13 +27,6 @@ numUniqueElemPhrases =
          then 1
          else 0)
 
-test :: Int
-test = let x = 2
-           y = x + 2
-       in x + y + z + a
-       where z = 4
-             a = z + 2
-
 -- | Part 2
 numValidPhrases2 :: FilePath -> IO Int
 numValidPhrases2 f = (numNoPermElemPhrases . lines) <$> readFile f

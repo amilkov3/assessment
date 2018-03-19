@@ -15,11 +15,11 @@ int answer required by advent of code
 
 -- | Part 1
 unsafeCaptcha1 :: FilePath -> IO Int
-unsafeCaptcha1 f = (compute1 . head . lines) <$> (readFile f)
+unsafeCaptcha1 f = (unsafeCompute1 . head . lines) <$> (readFile f)
 
 
-compute1 :: String -> Int
-compute1 line =
+unsafeCompute1 :: String -> Int
+unsafeCompute1 line =
   foldl
     (\i (x1, x2) ->
        if x1 == x2
@@ -33,11 +33,11 @@ compute1 line =
 
 -- | Part 2
 unsafeCaptcha2 :: FilePath -> IO Int
-unsafeCaptcha2 f = (compute2 . head . lines) <$> (readFile f)
+unsafeCaptcha2 f = (unsafeCompute2 . head . lines) <$> (readFile f)
 
 
-compute2 :: String -> Int
-compute2 line =
+unsafeCompute2 :: String -> Int
+unsafeCompute2 line =
   foldl
     (\i (x1, x2) ->
        if x1 == x2
